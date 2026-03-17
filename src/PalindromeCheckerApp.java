@@ -2,9 +2,8 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
+        // UC1 - Welcome Message
         System.out.println("Welcome to Palindrome Checker App");
-        System.out.println("This application checks whether a word is a palindrome.");
 
     }
-
 }
