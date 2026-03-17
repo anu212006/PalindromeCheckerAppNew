@@ -1,23 +1,20 @@
-import java.util.*;
+import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String str = "level";
-
-        Queue<Character> queue = new LinkedList<>();
-        Stack<Character> stack = new Stack<>();
+        String str = "racecar";
+        ArrayDeque<Character> deque = new ArrayDeque<>();
 
         for(char c : str.toCharArray()) {
-            queue.add(c);
-            stack.push(c);
+            deque.add(c);
         }
 
         boolean isPalindrome = true;
 
-        while(!queue.isEmpty()) {
-            if(!queue.remove().equals(stack.pop())) {
+        while(deque.size() > 1) {
+            if(!deque.removeFirst().equals(deque.removeLast())) {
                 isPalindrome = false;
                 break;
             }
