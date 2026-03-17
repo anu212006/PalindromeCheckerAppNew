@@ -2,21 +2,17 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // UC1
-        System.out.println("Welcome to Palindrome Checker App");
+        String input = "level";
+        String reversed = "";
 
-        // UC2 - Hardcoded Palindrome
-        String str = "madam";
-        String rev = "";
-
-        for(int i = str.length()-1; i >= 0; i--) {
-            rev = rev + str.charAt(i);
+        for(int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
         }
 
-        if(str.equals(rev)) {
-            System.out.println(str + " is Palindrome");
+        if(input.equals(reversed)) {
+            System.out.println("Palindrome");
         } else {
-            System.out.println(str + " is Not Palindrome");
+            System.out.println("Not Palindrome");
         }
     }
 }
